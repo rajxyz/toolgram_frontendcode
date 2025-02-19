@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+    <title>AT-PW TRICKS Login/Sign Up</title> 
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> 
+    <style>
+      body { 
+        font-family: 'Inter', sans-serif;
+        background-image: url('https://example.com/background.jpg'); /* Example background image */
+        background-size: cover;
+        background-position: center;
+      }
+      .hidden { 
+        display: none; 
+      }
+    </style> 
+  </head> 
+  <body class="flex items-center justify-center min-h-screen">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-md">
+      <div class="bg-gradient-to-r from-purple-500 to-indigo-500 p-6 text-white text-center relative">
+        <h1 class="text-2xl font-semibold mt-8">AT-PW TRICKS</h1>
+        <p class="mt-2" id="formTitle">Get started with your new account.</p>
+        <div class="absolute top-4 right-4"> 
+          <button onclick="toggleForms()" class="bg-white text-indigo-500 rounded-full px-4 py-1"> 
+            <span id="toggleText">Log in</span> 
+          </button>
+        </div>
+      </div> 
+
+      <!-- Sign Up Form -->
+      <div id="signupForm"> 
+        <div class="p-6"> 
+          <h2 class="text-2xl font-bold text-gray-800">Get started</h2> 
+          <p class="text-gray-500 mb-6">Make your own tricks.</p> 
+          <form id="signupFormElement"> 
+            <div class="mb-4"> 
+              <label class="block text-gray-700" for="signupEmail">Email Address</label> 
+              <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" type="email" id="signupEmail" name="email" placeholder="Enter your email address" required value="rajupatelx855@gmail.com"> 
+            </div> 
+            <div class="mb-4"> 
+              <label class="block text-gray-700" for="signupName">Your Name</label> 
+              <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" type="text" id="signupName" name="name" placeholder="Enter your name" required> 
+            </div> 
+            <div class="mb-4"> 
+              <label class="block text-gray-700" for="signupPassword">Password</label> 
+              <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" type="password" id="signupPassword" name="password" placeholder="Create a password" required value="akki@1234"> 
+            </div> 
+            <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-2 rounded-lg font-semibold">Sign up</button> 
+          </form>
+
+          <div class="flex justify-center space-x-4 mt-6">
+            <button class="flex items-center px-4 py-2 border rounded-lg"> 
+              <img alt="Instagram logo" class="w-5 h-5 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20"> Instagram 
+            </button> 
+            <button class="flex items-center px-4 py-2 border rounded-lg"> 
+              <img alt="Gmail logo" class="w-5 h-5 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Gmail_Icon.png" width="20"> Gmail 
+            </button> 
+          </div>
+
+          <div class="mt-4 text-center"> 
+            <span class="text-gray-500">Already have an account? </span> 
+            <a href="#" onclick="toggleForms()" class="text-indigo-500 hover:underline">Log in</a> 
+          </div> 
+        </div> 
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginForm" class="hidden"> 
+        <div class="p-6"> 
+          <form id="loginFormElement"> 
+            <div class="mb-4"> 
+              <label class="block text-gray-700" for="loginEmail">Email Address</label> 
+              <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" type="email" id="loginEmail" name="email" placeholder="Enter your email address" required> 
+            </div> 
+            <div class="mb-4"> 
+              <label class="block text-gray-700" for="loginPassword">Password</label> 
+              <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" type="password" id="loginPassword" name="password" placeholder="Enter your password" required> 
+            </div> 
+            <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-2 rounded-lg font-semibold">Log in</button> 
+          </form> 
+          
+          <div class="flex items-center justify-between my-6"> 
+            <hr class="flex-grow border-gray-300"> 
+            <span class="mx-4 text-gray-500">Or log in with</span> 
+            <hr class="flex-grow border-gray-300"> 
+          </div> 
+          
+          <!-- Social Login Options -->
+          <div class="flex justify-center space-x-4">
+            <button class="flex items-center px-4 py-2 border rounded-lg"> 
+              <img alt="Instagram logo" class="w-5 h-5 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20"> Instagram 
+            </button> 
+            <button class="flex items-center px-4 py-2 border rounded-lg"> 
+              <img alt="Gmail logo" class="w-5 h-5 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Gmail_Icon.png" width="20"> Gmail 
+            </button> 
+          </div>
+
+          <div class="mt-4 text-center"> 
+            <a href="#" class="text-indigo-500 hover:underline">Forgot your password?</a> 
+          </div> 
+          <div class="mt-4 text-center"> 
+            <span class="text-gray-500">Don't have an account? </span> 
+            <a href="#" onclick="toggleForms()" class="text-indigo-500 hover:underline">Sign up</a> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <script>
+      function toggleForms() {
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+        const formTitle = document.getElementById('formTitle');
+        const toggleText = document.getElementById('toggleText');
+
+        if (loginForm.classList.contains('hidden')) {
+          loginForm.classList.remove('hidden');
+          signupForm.classList.add('hidden');
+          formTitle.innerText = "Welcome back! Please log in to your account.";
+          toggleText.innerText = "Sign up";
+        } else {
+          loginForm.classList.add('hidden');
+          signupForm.classList.remove('hidden');
+          formTitle.innerText = "Get started with your new account.";
+          toggleText.innerText = "Log in";
+        }
+      }
+
+      function handleFormSubmit(event, redirectUrl) {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        // Add custom validation logic if necessary
+        // Assuming the validation is passed, redirect to the desired page.
+        window.location.href = redirectUrl;  // Redirect to navigation.html
+      }
+
+      // Add event listener for both forms to call handleFormSubmit
+      document.getElementById("signupFormElement").addEventListener("submit", function(event) {
+        handleFormSubmit(event, 'navigation.html');
+      });
+
+      document.getElementById("loginFormElement").addEventListener("submit", function(event) {
+        handleFormSubmit(event, 'navigation.html');
+      });
+    </script>
+  </body>
+  </html>
